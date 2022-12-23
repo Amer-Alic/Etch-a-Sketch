@@ -1,0 +1,122 @@
+:root {
+    --primary-gray: #A2A7A5;
+    --dark-gray: #6D696A;
+    --light-gray: #DAE2DF;
+    --pink-gray: #E2DADB;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body {
+    background-color: #A2A7A5;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    padding: 1.5rem 0rem;
+}
+
+#grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 10px 10px 48px -14px rgba(0, 0, 0, 0.75);
+}
+
+#settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+label {
+    text-align: center;
+    display: block;
+}
+
+#colorPicker {
+    --webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+    background: none;
+}
+
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 10px 10px 48px -14px rgba(0, 0, 0, 0.75);
+}
+
+input[type='range'] {
+    background-color: var(--dark-gray);
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    border: 1px solid var(--primary-gray);
+    border-radius: 25px;
+    background: var(--light-gray);
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -3px;
+    background-color: var(--dark-gray);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
+
+button {
+    min-width: 8rem;
+    background-color: var(--pink-gray);
+    box-shadow: 10px 10px 48px -14px rgba(0, 0, 0, 0.75);
+    transition: all 200ms;
+}
+
+button:hover,
+button:focus {
+    transform: scale(1.1);
+
+}
+
+#rainbowBtn:hover {
+    background-image: linear-gradient(to right,
+            #E7484F,
+            #E7484F 16.65%,
+            #F68B1D 16.65%,
+            #F68B1D 33.3%,
+            #FCED00 33.3%,
+            #FCED00 49.95%,
+            #009E4F 49.95%,
+            #009E4F 66.6%,
+            #00AAC3 66.6%,
+            #00AAC3 83.25%,
+            #732982 83.25%,
+            #732982 100%,
+            #E7484F 100%);
+    animation: slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
